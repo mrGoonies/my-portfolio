@@ -101,11 +101,16 @@ header {
 }
 
 .project-main {
-    margin-top: 3rem;
+
     && .project-main__container {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: center;
         justify-content: center;
+        margin: 5% 0;
+
+        && .card {
+            margin-bottom: 2rem;
+        }
     }
 }
