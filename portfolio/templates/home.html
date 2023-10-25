@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main class="project-main">
+    <section class="project-main__container">
+        {% if projects |length > 0 %}
+        {% for project in projects %}
+        <div class="card" style="width: 20rem;">
+            <img src={{ project.get('image')}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{project.get("name")}}</h5>
+                <p class="card-text">{{ project.get("Description")}}</p>
+                <a href={{ project.get("link")}} target="_blank" class="btn btn-primary">See Project</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </section>
+
+</main>
+
+{%endblock%}
